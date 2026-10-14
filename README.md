@@ -19,21 +19,31 @@
 ### 安装
 
 ```bash
-dsh plugin add git+https://github.com/gcnyin/dsh-i-have-adhd.git
+dsh plugin --profile web add git+https://github.com/gcnyin/dsh-i-have-adhd.git
 ```
+
+`--profile` 必填（无默认值）。dsh 自带这些 profile，装到哪个就用哪个名字：
+
+| Profile | 用途 |
+| --- | --- |
+| `web` | Web GUI（浏览器界面），本插件的主要使用场景 |
+| `headless` | 一次性任务：执行完打印结果即退出，无 HTTP / 浏览器层 |
+| `acp` | ACP 自动化：stdio JSON-RPC + 进程生命周期，供编辑器等客户端接入 |
+| `sdk` | SDK 接入：stdio JSON-RPC，程序化驱动完整 Harness |
+| `sdk-minimal` | 精简 SDK：JSON-RPC、单个 DeepSeek 适配器、持久 shell、JSONL 会话 |
 
 重启 dsh 会话后生效。也可以在 Plugin Manager 里管理启用/禁用。
 
 卸载：
 
 ```bash
-dsh plugin remove i-have-adhd-dsh
+dsh plugin --profile web remove i-have-adhd-dsh
 ```
 
 本地开发安装（克隆本仓库后）：
 
 ```bash
-dsh plugin add /absolute/path/to/dsh-i-have-adhd
+dsh plugin --profile web add /absolute/path/to/dsh-i-have-adhd
 ```
 
 ### 工作方式
@@ -87,21 +97,31 @@ Brings the [i-have-adhd](https://github.com/ayghri/i-have-adhd) ruleset to [Deep
 ### Install
 
 ```bash
-dsh plugin add git+https://github.com/gcnyin/dsh-i-have-adhd.git
+dsh plugin --profile web add git+https://github.com/gcnyin/dsh-i-have-adhd.git
 ```
+
+`--profile` is required (no default). dsh ships these profiles — install into whichever one you use:
+
+| Profile | Purpose |
+| --- | --- |
+| `web` | Web GUI (browser UI) — the main target of this plugin |
+| `headless` | One-shot: answer one task, print the result, exit; no HTTP/browser layer |
+| `acp` | ACP automation: stdio JSON-RPC + process lifecycle, for editor clients |
+| `sdk` | SDK access: stdio JSON-RPC driving the full Harness programmatically |
+| `sdk-minimal` | Minimal SDK: JSON-RPC, one DeepSeek adapter, persistent shell, JSONL sessions |
 
 Restart your dsh session. Manage enable/disable in the Plugin Manager.
 
 Remove:
 
 ```bash
-dsh plugin remove i-have-adhd-dsh
+dsh plugin --profile web remove i-have-adhd-dsh
 ```
 
 Local development (after cloning this repo):
 
 ```bash
-dsh plugin add /absolute/path/to/dsh-i-have-adhd
+dsh plugin --profile web add /absolute/path/to/dsh-i-have-adhd
 ```
 
 ### How it works
