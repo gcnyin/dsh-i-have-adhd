@@ -1,0 +1,11 @@
+# i-have-adhd-dsh — injects the ADHD-friendly output ruleset as a
+# system-prompt section, after the harness persona sections.
+#
+# Row config knobs (normalized at runtime, see README.md):
+#   enabled:    false loads the plugin without contributing the section
+#   extraRules: extra text appended verbatim after the canonical ruleset
+- insert:
+    - id: i-have-adhd-dsh
+      name: i-have-adhd-dsh
+      config:
+        enabled: true

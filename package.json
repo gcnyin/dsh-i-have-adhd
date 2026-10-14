@@ -1,0 +1,44 @@
+{
+  "name": "i-have-adhd-dsh",
+  "version": "0.1.0",
+  "description": "ADHD-friendly output shaping for DeepSeek Harness: the canonical i-have-adhd ruleset as one always-on system-prompt section. Install once, no tool calls.",
+  "type": "module",
+  "license": "MIT",
+  "author": "gcnyin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcnyin/dsh-i-have-adhd.git"
+  },
+  "bugs": "https://github.com/gcnyin/dsh-i-have-adhd/issues",
+  "homepage": "https://github.com/gcnyin/dsh-i-have-adhd#readme",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "adhd",
+    "output-style",
+    "accessibility",
+    "productivity",
+    "dsh-plugin",
+    "cordis-plugin"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "SKILL.md",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
